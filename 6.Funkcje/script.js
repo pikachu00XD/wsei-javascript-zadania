@@ -21,3 +21,22 @@ x(tab);
 
 //Zadanie 4
 
+function f(x)
+{
+  var y = 0;
+  var n = setInterval(() => 
+  {
+    console.log(x);
+    y++;
+    
+    if(y == 5)
+    {
+      console.log("Koniec");  
+      clearInterval(n);
+    }
+  }, 3000);
+}
+
+var str = "XD";
+
+f(str);
