@@ -111,3 +111,22 @@ for (var i=0;i<5;i++)
     console.log(space + x);
     x +='**';
 }
+
+//e
+
+var x = '*';
+for (var i=0;i<5;i++)
+{
+    var space = '';
+    for (var k=1; k<5-i; k++)
+    {
+        space += ' ';
+    }
+    console.log(space + x);
+    x +=' *';
+}  
+
+for(var j=0; j<4; j++)
+  {
+    console.log("    *");
+  }
