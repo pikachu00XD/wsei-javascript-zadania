@@ -33,3 +33,53 @@ var filteredNum = tab.filter(function(value)
   return(parseInt(value) == value)
 })
 console.log(filteredNum);
+
+//Zadanie 3
+
+var tab = [21, 37, 4, 20, 6, 9]
+//1
+var sum = 0;
+for(var i=1; i<(tab.length - 1); i++)
+  {
+    sum += tab[i];
+  }
+console.log(sum);
+//2
+var dif = 0;
+for(var i=1; i<(tab.length - 1); i++)
+  {
+    dif -= tab[i];
+  }
+console.log(dif);
+//3
+var avr = sum/(tab.length-2);
+console.log(avr);
+//4
+for(var i=1; i<(tab.length - 1); i++)
+  {
+    if(tab[i]%2 == 0) console.log(tab[i]);
+  }
+//5
+for(var i=1; i<(tab.length - 1); i++)
+  {
+    if(tab[i]%2 !== 0) console.log(tab[i]);
+  }
+//6
+var max = 0;
+for(var i=1; i<(tab.length - 1); i++)
+  {
+    if(max<tab[i]) max=tab[i];
+  }
+console.log(max);
+//7
+var min = tab[0];
+for(var i=1; i<(tab.length - 1); i++)
+  {
+    if(min>tab[i]) min=tab[i];
+  }
+console.log(min);
+//8
+for(var i = (tab.length - 2); i>0; i--)
+  {
+    console.log(tab[i]);
+  }
