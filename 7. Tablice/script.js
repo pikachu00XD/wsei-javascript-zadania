@@ -99,4 +99,21 @@ function f(x)
 var tab = [32, 19, 20, 19];
 f(tab);
 
-Zadanie 5
+//Zadanie 5
+
+function f(x)
+{
+  var sum = 0;
+  for(var i=0; i<x.length; i++)
+  {
+    sum += x[i];
+  }
+  var avr = sum/x.length;
+  for(var i=0; i<x.length; i++)
+    {
+      console.log(x[i]*avr);
+    }
+}
+
+var tab = [11, 22, 33, 44, 55];
+f(tab);
