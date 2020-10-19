@@ -152,3 +152,35 @@ var tab = ["XD", "Tak", "To", "Moja", "Praca"];
 f(tab);
 
 //Zadanie 8
+
+function f(x,y)
+{
+  var tab = [];
+  for(var i=0; i<x.length; i++)
+    {
+      tab[i] = x[i] + y[i];
+    }
+  console.log(tab);
+}
+
+var tab1 = [1, 2, 3, 4, 5];
+var tab2 = [1, 2, 3, 4, 5];
+f(tab1,tab2);
+
+//Zadanie 9
+
+function f(x,y)
+{
+  var index = x.indexOf(y);
+  if(index >=0)
+    {
+      x.splice(index, 1);
+    }
+  var newTab = x;
+  console.log(newTab);
+}
+
+var tab = [2, 1, 3, 7];
+f(tab, tab[2])
+
+//Zadanie 10
