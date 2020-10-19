@@ -18,7 +18,8 @@ var n = setInterval(() =>
 //Zadanie 2
 
 let tab = ["Maciek", "Jakub", "Aleksandra"]; 
-setTimeout(function() {
+setTimeout(function() 
+{
     for (let i=0; i<tab.length; i++) 
     {
         console.log(tab[i]);
