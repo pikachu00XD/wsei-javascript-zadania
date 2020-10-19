@@ -83,3 +83,20 @@ for(var i = (tab.length - 2); i>0; i--)
   {
     console.log(tab[i]);
   }
+
+//Zadanie 4
+
+function f(x)
+{
+  var sum = 0;
+  for(var i=0; i<x.length; i++)
+  {
+    sum += x[i];
+  }
+  console.log(sum);
+}
+
+var tab = [32, 19, 20, 19];
+f(tab);
+
+Zadanie 5
