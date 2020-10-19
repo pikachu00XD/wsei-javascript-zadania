@@ -117,3 +117,26 @@ function f(x)
 
 var tab = [11, 22, 33, 44, 55];
 f(tab);
+
+//Zadanie 6
+
+function f(x)
+{
+  var eveNum = [];
+  var j=0;
+  var sum = 0;
+  for(var i = 0; i<x.length; i++)
+    {
+      if(x[i]%2 == 0)
+        {
+          eveNum[j] = x[i];
+          sum += eveNum[j];
+          j++;
+        }
+    }
+  var avr = sum/eveNum.length;
+  console.log(avr);
+}
+
+var tab = [23, 45, 18, 24, 10];
+f(tab);
