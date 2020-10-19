@@ -140,3 +140,15 @@ function f(x)
 
 var tab = [23, 45, 18, 24, 10];
 f(tab);
+
+//Zadanie 7
+
+function f(x)
+{
+  console.log(x.sort())
+}
+
+var tab = ["XD", "Tak", "To", "Moja", "Praca"];
+f(tab);
+
+//Zadanie 8
