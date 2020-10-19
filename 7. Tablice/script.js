@@ -184,3 +184,15 @@ var tab = [2, 1, 3, 7];
 f(tab, tab[2])
 
 //Zadanie 10
+
+function f(x)
+{
+  for(var i = 0; i<x.length; i++)
+    {
+      x[i] *= -1;
+    }
+  console.log(x);
+}
+
+var tab = [1, 2, -3, 4, -5];
+f(tab);
