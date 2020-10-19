@@ -95,3 +95,18 @@ for (var i=0;i<z;i++){
     console.log(space + x);
     x +=' *';
 }
+
+//c
+
+var x = '*';
+
+for (var i=0;i<5;i++)
+{
+    var space = '';
+    for (var k=0; k<5-i; k++)
+    {
+        space += ' ';
+    }
+    console.log(space + x);
+    x +='**';
+}
