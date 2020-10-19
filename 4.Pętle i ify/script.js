@@ -84,17 +84,18 @@ for (var i=0;i<5;i++){
 
 //b
 
-var x = ' *';
-var z = 5;
+var x = '*';
 
-for (var i=0;i<z;i++){
+for (var i=0;i<5;i++)
+{
     var space = '';
-    for (var k=0; k<z-i; k++){
+    for (var k=1; k<5-i; k++)
+    {
         space += ' ';
     }
     console.log(space + x);
     x +=' *';
-}
+}  
 
 //c
 
