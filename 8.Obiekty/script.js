@@ -24,3 +24,21 @@ const car = {
 car.changeName("Mercedes");
 
 //Zadanie 3
+
+const calculate =
+{
+  sum : 0,
+  calculateSum : function(x)
+  {
+    for(var i = 0; i<x.length; i++)
+      {
+        this.sum += x[i];
+      }
+  }
+}
+var tab = [1, 2, 3];
+calculate.calculateSum(tab);
+console.log(calculate.sum);
+
+//Zadanie 4
+
