@@ -1,6 +1,7 @@
 //Zadanie 1
 
 const car = {
+  name : "BMW",
   color : "red",
   type : "sport",
   showText() {return "bruuum";}
