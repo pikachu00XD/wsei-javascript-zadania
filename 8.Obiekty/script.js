@@ -42,3 +42,18 @@ console.log(calculate.sum);
 
 //Zadanie 4
 
+const car = 
+{
+  name : "BMW",
+  age : 12,
+  maxSpeed : 260,
+  firstUser : true,
+  everDestroyed : false
+}
+
+for(let key in car)
+  {
+    console.log(key + ": " + car[key]);
+  }
+
+//Zadanie 5
