@@ -57,3 +57,21 @@ for(let key in car)
   }
 
 //Zadanie 5
+
+const car = 
+{
+  name : "BMW",
+  age : 12,
+  maxSpeed : 260,
+  firstUser : true,
+  everDestroyed : false,
+  engine :
+  {
+    power : "12V",
+    diesel : true
+  }
+}
+
+console.log(car.engine);
+
+//Zadanie 6
