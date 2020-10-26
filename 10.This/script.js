@@ -25,12 +25,12 @@ Person.prototype.upAge = function()
   this.age += 1;
 }
 
-let person1 = new Person("Adam", "Nowak", 19, "Poland", "Warsaw");
+let person = new Person("Adam", "Nowak", 19, "Poland", "Warsaw");
 let person2 = new Person("Grzegorz", "Brzęczyszczykiewicz", 25, "Poland", "Chrząszczyrzewoszyce");
 
-person1.info();
-person1.upAge();
-person1.info();
+person.info();
+person.upAge();
+person.info();
 
 person2.info();
 person2.upAge();
