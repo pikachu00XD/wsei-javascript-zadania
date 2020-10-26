@@ -37,8 +37,6 @@ person2.info();
 
 //Zadanie2
 
-//Zadanie 1
-
 function Person(firstName, lastName, age, country, city)
 {
   this.firstName = firstName;
@@ -74,4 +72,17 @@ Person.prototype.addFood = function(food)
 Person.prototype.vievFood = function()
 {
   console.log(this.favFood);
+}
+
+//Zadanie 3
+
+const calculator =
+{
+  a : 0,
+  b : 0,
+  setAB(a, b) {this.a = a; this.b = b;},
+  addition() {console.log(this.a + this.b)},
+  subtraction() {console.log(this.a - this.b)},
+  multiplication() {console.log(this.a * this.b)},
+  division() {if(this.b == 0) console.log("Nie można dzielić przez 0"); else console.log(this.a / this.b)}
 }
