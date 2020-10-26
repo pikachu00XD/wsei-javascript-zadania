@@ -1,0 +1,40 @@
+//Zadanie 1
+
+function Person(firstName, lastName, age, country, city)
+{
+  this.firstName = firstName;
+  this.lastName = lastName;
+  this.age = age;
+  this.country = country;
+  this.city = city
+}
+
+Person.prototype.info = function()
+{
+    console.log(`
+Imie: ${this.firstName}\n 
+Nazwisko: ${this.lastName}\n 
+Wiek: ${this.age}\n 
+Państwo: ${this.country}\n 
+Miasto: ${this.city}`);
+
+}
+
+Person.prototype.upAge = function()
+{
+  this.age += 1;
+}
+
+let person1 = new Person("Adam", "Nowak", 19, "Poland", "Warsaw");
+let person2 = new Person("Grzegorz", "Brzęczyszczykiewicz", 25, "Poland", "Chrząszczyrzewoszyce");
+
+person1.info();
+person1.upAge();
+person1.info();
+
+person2.info();
+person2.upAge();
+person2.upAge();
+person2.info();
+
+//Zadanie2
