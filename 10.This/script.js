@@ -86,3 +86,19 @@ const calculator =
   multiplication() {console.log(this.a * this.b)},
   division() {if(this.b == 0) console.log("Nie można dzielić przez 0"); else console.log(this.a / this.b)}
 }
+
+//Zadanie 4
+
+let ladder =
+{
+  maxStep : 10,
+  step : 0,
+  getOn() {if(this.step == 0) {this.step++; console.log(`Wszedłeś na ${this.step} stopień`);}
+          else console.log("Już jesteś na drabinie")},
+  getDown() {if(this.step == 1) {step--; console.log("Zszedłeś z drabiny");}
+            else if(this.step == 0) console.log("Musisz znajdować sie na drabinie aby aktywować tą metode");
+            else {this.step--; console.log(`Zszedłeś na ${this.step} stopień`)}},
+  getUp() {if(this.step == this.maxStep) console.log("Nie możesz iść wyżej");
+          else if(this.step == 0) console.log("Musisz znajdować sie na drabinie aby aktywować tą metode");
+          else {this.step++; console.log(`Wszedłeś na ${this.step} stopień`)}}
+}
