@@ -92,3 +92,14 @@ const car =
 
 car.color = "blue";
 car.Hello = function() {console.log("Hello")};
+
+//Zadanie 4
+
+let ladder =
+{
+  position : "down",
+  getUp() {if(this.position == "up") console.log("Już jesteś na drabinie"); 
+           else console.log("Wszedłeś na drabine"); this.position = "up" },
+  getDown() {if(this.position == "down") console.log("Już zszedłeś z drabiny");
+            else console.log("Zszedłeś z drabiny"); this.positon = "down"}
+}
