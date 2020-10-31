@@ -110,47 +110,85 @@ newButtonForList2.addEventListener('click', function(){
     document.getElementById('list1').insertBefore(elementToSend[elementToSend.length-1], newButtonForList1);
 })
 
-//Zadanie 8
+// //Zadanie 8
 
-var newForm1 = document.createElement('form');
-bodyDocument.insertBefore(newForm1, jsScript);
+// var newForm1 = document.createElement('form');
+// bodyDocument.insertBefore(newForm1, jsScript);
 
-var newInputElement = document.createElement('input');
-newInputElement.type = "text"; newInputElement.id = "element"; newInputElement.name = "element";
-newForm1.appendChild(newInputElement);
+// var newInputElement = document.createElement('input');
+// newInputElement.type = "text"; newInputElement.id = "element"; newInputElement.name = "element";
+// newForm1.appendChild(newInputElement);
 
-var newInputText = document.createElement('input');
-newInputText.type = "text"; newInputText.id = "text"; newInputText.name = "text";
-newForm1.appendChild(newInputText);
+// var newInputText = document.createElement('input');
+// newInputText.type = "text"; newInputText.id = "text"; newInputText.name = "text";
+// newForm1.appendChild(newInputText);
 
-var newInputTextColor = document.createElement('input');
-newInputTextColor.type = "color"; newInputTextColor.id = "color"; newInputTextColor.name = "color";
-newForm1.appendChild(newInputTextColor);
+// var newInputTextColor = document.createElement('input');
+// newInputTextColor.type = "color"; newInputTextColor.id = "color"; newInputTextColor.name = "color";
+// newForm1.appendChild(newInputTextColor);
 
-var newInputNumber = document.createElement('input');
-newInputNumber.type = "number"; newInputNumber.id = "number"; newInputNumber.name = "number";
-newForm1.appendChild(newInputNumber);
+// var newInputNumber = document.createElement('input');
+// newInputNumber.type = "number"; newInputNumber.id = "number"; newInputNumber.name = "number";
+// newForm1.appendChild(newInputNumber);
 
-var newInputButton = document.createElement('input');
-newInputButton.type = "button"; newInputButton.id = "button"; newInputButton.name = "button"; newInputButton.value = "Create";
-newForm1.appendChild(newInputButton);
+// var newInputButton = document.createElement('input');
+// newInputButton.type = "button"; newInputButton.id = "button"; newInputButton.name = "button"; newInputButton.value = "Create";
+// newForm1.appendChild(newInputButton);
 
-newInputButton.addEventListener('click', function(){
-    const type = document.getElementById('element').value;
-    const text = document.getElementById('text').value;
-    const color = document.getElementById('color').value;
-    const quantity = document.getElementById('number').value;
+// newInputButton.addEventListener('click', function(){
+//     const type = document.getElementById('element').value;
+//     const text = document.getElementById('text').value;
+//     const color = document.getElementById('color').value;
+//     const quantity = document.getElementById('number').value;
 
-    for(var i = 0; i<quantity; i++)
-    {
-        let newElement = document.createElement(type);
-        newElement.innerText = text;
-        newElement.setAttribute('style', 'color:'+color);
-        bodyDocument.insertBefore(newElement, jsScript);
-    }
-})
+//     for(var i = 0; i<quantity; i++)
+//     {
+//         let newElement = document.createElement(type);
+//         newElement.innerText = text;
+//         newElement.setAttribute('style', 'color:'+color);
+//         bodyDocument.insertBefore(newElement, jsScript);
+//     }
+// })
 
 //Zadanie 9
 
+let tab = [];
+var newForm2 = document.createElement('form');
+bodyDocument.insertBefore(newForm2, jsScript);
 
+var newInputFName = document.createElement('input');
+newInputFName.type = "text"; newInputFName.id = "fName"; newInputFName.name = "fName";
+var newLabelFName = document.createElement('label');
+newLabelFName.for = "fName"; newLabelFName.innerText = "Imie";
+tab[0] = newInputFName;
+tab[1] = newLabelFName;
+
+var newInputLName = document.createElement('input');
+newInputLName.type = "text"; newInputLName.id = "lName"; newInputLName.name = "lName";
+var newLabelLName = document.createElement('label');
+newLabelFName.for = "lName"; newLabelLName.innerText = "Nazwisko";
+tab[2] = newInputLName;
+tab[3] = newLabelLName;
+
+var newInputAge = document.createElement('input');
+newInputAge.type = "number"; newInputAge.id = "age"; newInputAge.name = "age"; newInputAge.min = 0;
+var newLabelAge = document.createElement('label');
+newLabelAge.for = "age"; newLabelAge.innerText = "Wiek";
+tab[4] = newInputAge;
+tab[5] = newLabelAge;
+
+var newInputNumChild = document.createElement('input');
+newInputNumChild.type = "number"; newInputNumChild.id = "numChild"; newInputNumChild.name = "numChild"; newInputNumChild.min = 0;
+var newLabelNumChild = document.createElement('label');
+newLabelNumChild.for = "numChild"; newLabelNumChild.innerText = "Ilość dzieci";
+tab[6] = newInputNumChild;
+tab[7] = newLabelNumChild;
+
+for(var i = 0; i<tab.length; i+=2)
+{
+    var newBr = document.createElement('br');
+    newForm2.appendChild(tab[i]);
+    newForm2.appendChild(tab[i+1]);
+    newForm2.appendChild(newBr);
+}
 
