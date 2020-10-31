@@ -112,43 +112,43 @@ newButtonForList2.addEventListener('click', function(){
 
 // //Zadanie 8
 
-// var newForm1 = document.createElement('form');
-// bodyDocument.insertBefore(newForm1, jsScript);
+var newForm1 = document.createElement('form');
+bodyDocument.insertBefore(newForm1, jsScript);
 
-// var newInputElement = document.createElement('input');
-// newInputElement.type = "text"; newInputElement.id = "element"; newInputElement.name = "element";
-// newForm1.appendChild(newInputElement);
+var newInputElement = document.createElement('input');
+newInputElement.type = "text"; newInputElement.id = "element"; newInputElement.name = "element";
+newForm1.appendChild(newInputElement);
 
-// var newInputText = document.createElement('input');
-// newInputText.type = "text"; newInputText.id = "text"; newInputText.name = "text";
-// newForm1.appendChild(newInputText);
+var newInputText = document.createElement('input');
+newInputText.type = "text"; newInputText.id = "text"; newInputText.name = "text";
+newForm1.appendChild(newInputText);
 
-// var newInputTextColor = document.createElement('input');
-// newInputTextColor.type = "color"; newInputTextColor.id = "color"; newInputTextColor.name = "color";
-// newForm1.appendChild(newInputTextColor);
+var newInputTextColor = document.createElement('input');
+newInputTextColor.type = "color"; newInputTextColor.id = "color"; newInputTextColor.name = "color";
+newForm1.appendChild(newInputTextColor);
 
-// var newInputNumber = document.createElement('input');
-// newInputNumber.type = "number"; newInputNumber.id = "number"; newInputNumber.name = "number";
-// newForm1.appendChild(newInputNumber);
+var newInputNumber = document.createElement('input');
+newInputNumber.type = "number"; newInputNumber.id = "number"; newInputNumber.name = "number";
+newForm1.appendChild(newInputNumber);
 
-// var newInputButton = document.createElement('input');
-// newInputButton.type = "button"; newInputButton.id = "button"; newInputButton.name = "button"; newInputButton.value = "Create";
-// newForm1.appendChild(newInputButton);
+var newInputButton = document.createElement('input');
+newInputButton.type = "button"; newInputButton.id = "button"; newInputButton.name = "button"; newInputButton.value = "Create";
+newForm1.appendChild(newInputButton);
 
-// newInputButton.addEventListener('click', function(){
-//     const type = document.getElementById('element').value;
-//     const text = document.getElementById('text').value;
-//     const color = document.getElementById('color').value;
-//     const quantity = document.getElementById('number').value;
+newInputButton.addEventListener('click', function(){
+    const type = document.getElementById('element').value;
+    const text = document.getElementById('text').value;
+    const color = document.getElementById('color').value;
+    const quantity = document.getElementById('number').value;
 
-//     for(var i = 0; i<quantity; i++)
-//     {
-//         let newElement = document.createElement(type);
-//         newElement.innerText = text;
-//         newElement.setAttribute('style', 'color:'+color);
-//         bodyDocument.insertBefore(newElement, jsScript);
-//     }
-// })
+    for(var i = 0; i<quantity; i++)
+    {
+        let newElement = document.createElement(type);
+        newElement.innerText = text;
+        newElement.setAttribute('style', 'color:'+color);
+        bodyDocument.insertBefore(newElement, jsScript);
+    }
+})
 
 //Zadanie 9
 
