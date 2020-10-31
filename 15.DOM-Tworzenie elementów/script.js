@@ -146,7 +146,7 @@ newInputButton.addEventListener('click', function(){
         let newElement = document.createElement(type);
         newElement.innerText = text;
         newElement.setAttribute('style', 'color:'+color);
-        bodyDocument.insertBefore(newElement, jsScript);
+        newForm1.appendChild(newElement);
     }
 })
 
