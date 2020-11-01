@@ -68,3 +68,8 @@ calculator1.clearMemory();
 calculator1.showMemory();
 
 //Zadanie 3
+
+//           _
+//       .__(.)< "Ten kod nie nadaje się
+//        \___)   do dializy nerek"
+// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
