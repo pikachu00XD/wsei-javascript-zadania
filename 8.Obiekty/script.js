@@ -103,3 +103,8 @@ let ladder =
   getDown() {if(this.position == "down") console.log("Już zszedłeś z drabiny");
             else console.log("Zszedłeś z drabiny"); this.positon = "down"}
 }
+
+//           _
+//       .__(.)< *kwa*Ten kod nie nadaje się
+//        \___)   do dializy nerek*kwa*
+// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
