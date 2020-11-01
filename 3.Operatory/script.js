@@ -58,3 +58,8 @@ var result = null;
 result = number3 > number4;
 
 console.log(result);
+
+//           _
+//       .__(.)< *kwa*Ten kod nie nadaje się
+//        \___)   do dializy nerek*kwa*
+// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
