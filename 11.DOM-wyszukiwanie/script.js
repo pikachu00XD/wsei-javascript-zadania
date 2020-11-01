@@ -26,3 +26,8 @@ f("ul");
 f("span");
 f("div.list span");
 f("div#spans span");
+
+//           _
+//       .__(.)< *kwa*Ten kod nie nadaje się
+//        \___)   do dializy nerek*kwa*
+// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
