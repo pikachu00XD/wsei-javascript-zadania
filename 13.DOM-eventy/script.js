@@ -90,3 +90,7 @@ let firstNumber;
 let secondNumber;
 let operation;
 
+//           _
+//       .__(.)< *kwa*Ten kod nie nadaje się
+//        \___)   do dializy nerek*kwa*
+// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
