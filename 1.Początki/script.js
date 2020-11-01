@@ -17,3 +17,8 @@ console.log("Hello World);
 // w punkcie 1 jest string
 // w punkcie 2 szuka zmiennej
 // w punkcie 3 jest niedomknięty cudzysłów 
+
+//           _
+//       .__(.)< *kwa*Ten kod nie nadaje się
+//        \___)   do dializy nerek*kwa*
+// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
