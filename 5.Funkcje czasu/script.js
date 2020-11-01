@@ -40,3 +40,8 @@ setTimeout(function()
     }, 3000);
     
 }, 2000);
+
+//           _
+//       .__(.)< *kwa*Ten kod nie nadaje się
+//        \___)   do dializy nerek*kwa*
+// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
