@@ -103,3 +103,8 @@ const mainDiv = document.getElementById('ex6');
 const smallDiv1 = mainDiv.firstElementChild.firstElementChild.firstElementChild;
 const smallDiv2 = mainDiv.firstChild.parentElement.firstElementChild.firstElementChild.nextElementSibling.parentElement;
 const smallDiv3 = mainDiv.parentElement.firstElementChild.parentElement.firstElementChild.nextElementSibling.firstElementChild.firstElementChild.firstElementChild;
+
+//           _
+//       .__(.)< *kwa*Ten kod nie nadaje się
+//        \___)   do dializy nerek*kwa*
+// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
