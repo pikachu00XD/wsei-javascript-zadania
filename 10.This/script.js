@@ -102,3 +102,8 @@ let ladder =
           else if(this.step == 0) console.log("Musisz znajdować sie na drabinie aby aktywować tą metode");
           else {this.step++; console.log(`Wszedłeś na ${this.step} stopień`)}}
 }
+
+//           _
+//       .__(.)< *kwa*Ten kod nie nadaje się
+//        \___)   do dializy nerek*kwa*
+// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
