@@ -378,3 +378,8 @@ var fillObject = function(name, surname, age){
 }
 
 fillObject("Jan", "Krakowiak", "18");
+
+//           _
+//       .__(.)< *kwa*Ten kod nie nadaje się
+//        \___)   do dializy nerek*kwa*
+// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
