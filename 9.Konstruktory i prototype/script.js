@@ -68,6 +68,7 @@ calculator1.clearMemory();
 calculator1.showMemory();
 
 //Zadanie 3
+//Szczerze się poddaje, nie mam pojęcia jak to zrobić a siedziałem nad tym mega długo
 
 //           _
 //       .__(.)< "Ten kod nie nadaje się
