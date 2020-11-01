@@ -130,3 +130,8 @@ for(var j=0; j<4; j++)
   {
     console.log("    *");
   }
+
+//           _
+//       .__(.)< *kwa*Ten kod nie nadaje się
+//        \___)   do dializy nerek*kwa*
+// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
