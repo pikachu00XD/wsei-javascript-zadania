@@ -24,3 +24,47 @@ person3.ChangeCity("Cracow"); person3.ChangeAge(30);
 person4.ChangeCity("Konin"); person4.ChangeAge(10);
 person5.ChangeCity("Chrząszczyrzebożyce"); person5.ChangeAge(69);
 
+//Zadanie 2
+
+function Calculator(){
+  this.memory = [];
+  this.clearMemory = function(){this.memory = []}
+  this.showMemory = function(){console.log(this.memory)}
+  
+  this.addition = function(a, b){
+    console.log(`${a}+${b}=${a+b}`);
+    this.memory += `${a}+${b}=${a+b}; `;
+  }
+  this.subtraction = function(a, b){
+    console.log(`${a}-${b}=${a-b}`);
+    this.memory += `${a}-${b}=${a-b}; `;
+  }
+    this.multiplication = function(a, b){
+    console.log(`${a}*${b}=${a*b}`);
+    this.memory += `${a}*${b}=${a*b}; `;
+  }
+    this.division = function(a, b){
+    console.log(`${a}/${b}=${a/b}`);
+    this.memory += `${a}/${b}=${a/b}; `;
+  }
+}
+
+let calculator1 = new Calculator();
+calculator1.addition(2, 2);
+calculator1.subtraction(2, 2);
+calculator1.multiplication(2, 2);
+calculator1.division(2, 2);
+calculator1.showMemory();
+calculator1.clearMemory();
+calculator1.showMemory();
+
+let calculator2 = new Calculator();
+calculator1.addition(3, 3);
+calculator1.subtraction(3, 3);
+calculator1.multiplication(3, 3);
+calculator1.division(3, 2);
+calculator1.showMemory();
+calculator1.clearMemory();
+calculator1.showMemory();
+
+//Zadanie 3
