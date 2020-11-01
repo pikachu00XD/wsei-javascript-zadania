@@ -324,4 +324,7 @@ const tabString = ["Mar4eT6", "123", "Ala"]
 
 firstFunction(tabString);
 
-
+//           _
+//       .__(.)< *kwa*Ten kod nie nadaje się
+//        \___)   do dializy nerek*kwa*
+// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
