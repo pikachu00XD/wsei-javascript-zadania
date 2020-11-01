@@ -155,32 +155,33 @@ newInputButton.addEventListener('click', function(){
 let tab = [];
 var newForm2 = document.createElement('form');
 bodyDocument.insertBefore(newForm2, jsScript);
+newForm2.id = "XD";
 
 var newInputFName = document.createElement('input');
-newInputFName.type = "text"; newInputFName.id = "fName"; newInputFName.name = "fName";
+newInputFName.type = "text"; newInputFName.id = "fName"; newInputFName.name = "fName"; newInputFName.className = "toGet";
 var newLabelFName = document.createElement('label');
-newLabelFName.for = "fName"; newLabelFName.innerText = "Imie";
+newLabelFName.for = "fName"; newLabelFName.innerText = "Imie"; newLabelFName.className = "toGet";
 tab[0] = newInputFName;
 tab[1] = newLabelFName;
 
 var newInputLName = document.createElement('input');
-newInputLName.type = "text"; newInputLName.id = "lName"; newInputLName.name = "lName";
+newInputLName.type = "text"; newInputLName.id = "lName"; newInputLName.name = "lName"; newInputLName.className = "toGet";
 var newLabelLName = document.createElement('label');
-newLabelFName.for = "lName"; newLabelLName.innerText = "Nazwisko";
+newLabelFName.for = "lName"; newLabelLName.innerText = "Nazwisko"; newLabelLName.className = "toGet";
 tab[2] = newInputLName;
 tab[3] = newLabelLName;
 
 var newInputAge = document.createElement('input');
-newInputAge.type = "number"; newInputAge.id = "age"; newInputAge.name = "age"; newInputAge.min = 0;
+newInputAge.type = "number"; newInputAge.id = "age"; newInputAge.name = "age"; newInputAge.min = 0; newInputAge.className = "toGet";
 var newLabelAge = document.createElement('label');
-newLabelAge.for = "age"; newLabelAge.innerText = "Wiek";
+newLabelAge.for = "age"; newLabelAge.innerText = "Wiek"; newLabelAge.className = "toGet";
 tab[4] = newInputAge;
 tab[5] = newLabelAge;
 
 var newInputNumChild = document.createElement('input');
-newInputNumChild.type = "number"; newInputNumChild.id = "numChild"; newInputNumChild.name = "numChild"; newInputNumChild.min = 0;
+newInputNumChild.type = "number"; newInputNumChild.id = "numChild"; newInputNumChild.name = "numChild"; newInputNumChild.min = 0; newInputNumChild.className = "toGet";
 var newLabelNumChild = document.createElement('label');
-newLabelNumChild.for = "numChild"; newLabelNumChild.innerText = "Ilość dzieci";
+newLabelNumChild.for = "numChild"; newLabelNumChild.innerText = "Ilość dzieci"; newLabelNumChild.className = "toGet";
 tab[6] = newInputNumChild;
 tab[7] = newLabelNumChild;
 
@@ -192,3 +193,188 @@ for(var i = 0; i<tab.length; i+=2)
     newForm2.appendChild(newBr);
 }
 
+var newForm2ButtonMore = document.createElement('input');
+newForm2ButtonMore.type = "button"; newForm2ButtonMore.value = "Więcej"; newForm2ButtonMore.id = "more"; newForm2ButtonMore.name = "more";
+newForm2.appendChild(newForm2ButtonMore);
+
+var newForm2ButoonCreate = document.createElement('input');
+newForm2ButoonCreate.type = "button"; newForm2ButoonCreate.value = "Utwórz"; newForm2ButoonCreate.id = "create"; newForm2ButoonCreate.name = "create";
+newForm2.appendChild(newForm2ButoonCreate);
+
+var x = 0;
+var createInputLabel = function(){
+    for(var i = 0; i<=1; i++)
+    {
+        var newInput = document.createElement("input");
+        newInput.type = "text"; newInput.id = "input"+x; newInput.name = "input"+x; newInput.className = "toGet"
+        newForm2.insertBefore(newInput, newForm2ButtonMore);
+        x++
+    }
+    var newBr = document.createElement('br');
+    newForm2.insertBefore(newBr, newForm2ButtonMore);
+}
+newForm2ButtonMore.addEventListener('click', createInputLabel);
+
+var deleteRow = function(){
+    rowToDelete = this.parentElement;
+    this.parentElement.parentElement.removeChild(rowToDelete);
+}
+
+var newStyle = document.createElement('style');
+newStyle.innerHTML = 'td { border: 1px solid black; }';
+bodyDocument.insertBefore(newStyle, document.getElementById('root'));
+
+var createTable = function(){
+    var tabElements = newForm2.getElementsByClassName('toGet');
+    let newTab = document.createElement('tab');
+    for(var i = 0; i<tabElements.length;)
+    {
+        let newTr = document.createElement('tr');
+        for(var j = 0; j<=1; j++)
+        {
+            let newTd = document.createElement('td')
+            if(i == 1 || i == 3 || i ==5 || i ==7){newTd.innerText = tabElements[i].innerText;}
+            else {newTd.innerText = tabElements[i].value;}
+            checkStrings(newTd);
+            newTr.appendChild(newTd);
+            i++;
+        }
+        var newButtonDelete = document.createElement('input');
+        newButtonDelete.type = 'button'; newButtonDelete.value = "Usuń"; newButtonDelete.id = 'delete'; newButtonDelete.name = 'delete';
+        newButtonDelete.addEventListener('click', deleteRow);
+        newTr.appendChild(newButtonDelete);
+        newTab.appendChild(newTr);
+    }
+    bodyDocument.insertBefore(newTab, jsScript);
+}
+
+newForm2ButoonCreate.addEventListener('click', createTable);
+
+//Zadanie 10
+
+var checkStrings = function(string){
+    var char = string.innerText[0];
+    var restOfWord = string.innerText.slice(1);
+    string.innerText = char.toUpperCase() + restOfWord;
+}
+
+//Zadanie 11
+
+let checkForNumb = function(string){
+    var sum = 0;
+    var product = 1;
+    for(var i = 0; i<string.length; i++)
+    {
+        if(parseInt(string[i])==string[i])
+        {
+            sum += parseInt(string[i]);
+            product *= string[i];
+        }
+    }
+    console.log(sum);
+    for(var i = 0; i<product; i++)
+    {
+        newDivString = document.createElement('div');
+        newDivString.innerText = string;
+        bodyDocument.insertBefore(newDivString, jsScript);
+    }
+}
+
+checkForNumb("21XD37");
+
+//Zadanie 12
+
+let setString = function(string){
+    document.getElementById('root').innerText = string;
+}
+
+setString("XD");
+
+var checkDiv = document.getElementById('root');
+checkDiv.method1 = function(){
+    regex = /Ala/gi;
+    if(regex.test(this.innerText)== true){
+        let newString = this.innerText.replace(regex, 'Ola');
+        this.innerText = newString;
+    }
+    else{
+        var newDivError = document.createElement('div');
+        newDivError.innerText = "Słowo Ala nie występuje w tekście.";
+        this.appendChild(newDivError);
+    }
+}
+
+checkDiv.method1();
+
+//Zadanie 13
+
+var firstFunction = function(string){
+    let firstResult = [];
+    for(var i = 0; i < string.length; i++){
+        var sum = 0;
+        for(var j = 0; j < string[i].length; j++){
+            if(parseInt(string[i][j])==string[i][j]) sum++;
+        }
+        firstResult[i] = sum;
+    }
+    return firstResult;
+}
+
+var secondFunction = function(string){
+    let secondResult = 0;
+    for(var i = 0; i < string.length; i++){
+        for(var j = 0; j < string[i].length; j++){
+            if(parseInt(string[i][j])==string[i][j]) secondResult += parseInt(string[i][j]);
+        }
+    }
+    return secondResult;
+}
+
+var thirdFunction = function(string){
+    let returned1 = firstFunction(string);
+    let returned2 = secondFunction(string);
+    let sum = 0;
+    for(var i = 0; i<returned1.length; i++){
+        sum += returned1[i];
+    }
+    result = returned2/sum;
+    return result;
+}
+
+const tabString = ["Mar4eT6", "123", "Ala"]
+
+console.log(thirdFunction(tabString));
+
+//Zadanie 14
+
+let object3 = {
+    name : "",
+    surname : "",
+    age : ""
+}
+
+var fillObject = function(name, surname, age){
+    object3.name = name;
+    object3.nameLenght = name.length;
+    object3.surname = surname;
+    object3.surnameLength = surname.length;
+    object3.age = age;
+    object3.ageLength = surname.length;
+
+    if(object3.nameLenght > 5 || object3.surnameLength > 5 || object3.ageLength > 5){
+        resetButton = document.createElement('button');
+        resetButton.type = "reset"; resetButton.innerText = "RESET";
+        resetButton.addEventListener('click', function(){
+            object3 = {
+                name : "",
+                surname : "",
+                age : ""
+            }
+            console.log(object3);
+        })
+        bodyDocument.insertBefore(resetButton, jsScript)
+    }
+    console.log(object3);
+}
+
+fillObject("Jan", "Krakowiak", "18");
