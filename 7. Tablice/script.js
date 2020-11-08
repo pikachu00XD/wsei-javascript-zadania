@@ -1,330 +1,198 @@
 //Zadanie 1
 
-const jsScript = document.querySelector('script');
-const bodyDocument = document.querySelector('body');
-const myDiv = document.createElement('div');
-bodyDocument.insertBefore(myDiv, document.getElementById('root'));
-myDiv.innerText = "To jest nowy element";
+var tab = ["XD", 54, '!'];
 
+for(var i=0; i<3; i++)
+  {
+    console.log(tab[i]);
+  }
+  
 //Zadanie 2
 
-const favFruits = document.createElement('ul');
-bodyDocument.insertBefore(favFruits, jsScript);
-favFruits.id = 'fruits';
-for(var i = 0; i<6; i++)
+var tab = [2137, "XD", 420, 69, "jp2gmd", "papaj"];
+//1
+console.log(tab[0] + tab[1]);
+//2
+console.log(tab[tab.length - 1]);
+//3
+console.log(tab);
+//4
+for (var i=0; i<tab.length; i+=2)
+  {
+    console.log(tab[i]);
+  }
+//5
+var filteredStr = tab.filter(function(value)
 {
-    const newLi = document.createElement('li');
-    document.getElementById('fruits').appendChild(newLi);
-}
-
-const listFruits = document.getElementById('fruits').children;
-listFruits[0].innerText = "banan";
-listFruits[1].innerText = "ananas";
-listFruits[2].innerText = "brzoskwinia";
-listFruits[3].innerText = "jabłko";
-listFruits[4].innerText = "gruszka";
-listFruits[5].innerText = "arbuz";
+  return!(parseInt(value) == value)
+})
+console.log(filteredStr);
+//6
+var filteredNum = tab.filter(function(value)
+{
+  return(parseInt(value) == value)
+})
+console.log(filteredNum);
 
 //Zadanie 3
 
-favFruits.addEventListener('click', function(){
-    for(var i = listFruits.length-1; i>0; i-=2)
-    {
-        var toDelete = listFruits[i];
-        toDelete.parentElement.removeChild(toDelete);
-    }
-})
+var tab = [21, 37, 4, 20, 6, 9]
+//1
+var sum = 0;
+for(var i=1; i<(tab.length - 1); i++)
+  {
+    sum += tab[i];
+  }
+console.log(sum);
+//2
+var dif = 0;
+for(var i=1; i<(tab.length - 1); i++)
+  {
+    dif -= tab[i];
+  }
+console.log(dif);
+//3
+var avr = sum/(tab.length-2);
+console.log(avr);
+//4
+for(var i=1; i<(tab.length - 1); i++)
+  {
+    if(tab[i]%2 == 0) console.log(tab[i]);
+  }
+//5
+for(var i=1; i<(tab.length - 1); i++)
+  {
+    if(tab[i]%2 !== 0) console.log(tab[i]);
+  }
+//6
+var max = 0;
+for(var i=1; i<(tab.length - 1); i++)
+  {
+    if(max<tab[i]) max=tab[i];
+  }
+console.log(max);
+//7
+var min = tab[0];
+for(var i=1; i<(tab.length - 1); i++)
+  {
+    if(min>tab[i]) min=tab[i];
+  }
+console.log(min);
+//8
+for(var i = (tab.length - 2); i>0; i--)
+  {
+    console.log(tab[i]);
+  }
 
 //Zadanie 4
 
-const newButton = document.createElement('button');
-bodyDocument.insertBefore(newButton, jsScript);
+function f(x)
+{
+  var sum = 0;
+  for(var i=0; i<x.length; i++)
+  {
+    sum += x[i];
+  }
+  console.log(sum);
+}
 
-newButton.addEventListener('click', function(){
-    this.parentElement.removeChild(this);
-})
+var tab = [32, 19, 20, 19];
+f(tab);
 
 //Zadanie 5
 
-let divMaker = function(number)
+function f(x)
 {
-    for(var i = 1; i<=number; i++)
+  var sum = 0;
+  for(var i=0; i<x.length; i++)
+  {
+    sum += x[i];
+  }
+  var avr = sum/x.length;
+  for(var i=0; i<x.length; i++)
     {
-        const newDiv = document.createElement('div');
-        bodyDocument.insertBefore(newDiv, jsScript);
-        newDiv.innerText = "to jest div numer " + i;
+      console.log(x[i]*avr);
     }
 }
-divMaker(10);
+
+var tab = [11, 22, 33, 44, 55];
+f(tab);
 
 //Zadanie 6
 
-const newDiv1 = document.createElement('div');
-newDiv1.innerText = "to jest div";
-const newDiv2 = document.createElement('div');
-newDiv2.className = "box";
-const newDiv3 = document.createElement('div');
-newDiv3.innerText = "to jest div";
-const newSpan1 = document.createElement('span');
-newSpan1.innerText = "to jest span";
-const newSpan2 = document.createElement('span');
-newSpan2.innerText = "to jest span";
+function f(x)
+{
+  var eveNum = [];
+  var j=0;
+  var sum = 0;
+  for(var i = 0; i<x.length; i++)
+    {
+      if(x[i]%2 == 0)
+        {
+          eveNum[j] = x[i];
+          sum += eveNum[j];
+          j++;
+        }
+    }
+  var avr = sum/eveNum.length;
+  console.log(avr);
+}
 
-bodyDocument.insertBefore(newDiv1, jsScript);
-bodyDocument.insertBefore(newSpan1, jsScript);
-bodyDocument.insertBefore(newDiv2, jsScript);
-bodyDocument.querySelector('div.box').appendChild(newDiv3);
-bodyDocument.insertBefore(newSpan2, jsScript);
+var tab = [23, 45, 18, 24, 10];
+f(tab);
 
 //Zadanie 7
 
-const newList1 = document.createElement('ul');
-bodyDocument.insertBefore(newList1, jsScript);
-newList1.id = 'list1';
-const newButtonForList1 = document.createElement('button');
-newList1.appendChild(newButtonForList1);
-
-const newList2 = document.createElement('ul');
-bodyDocument.insertBefore(newList2, jsScript);
-newList2.id = 'list2';
-const newButtonForList2 = document.createElement('button');
-newList2.appendChild(newButtonForList2);
-
-for(var i = 0; i < 10; i++)
+function f(x)
 {
-    const newLi = document.createElement('li');
-    newLi.innerText = 'XD';
-    document.getElementById('list1').insertBefore(newLi, newButtonForList1);
+  console.log(x.sort())
 }
 
-newButtonForList1.addEventListener('click', function(){
-    if(this.parentElement.getElementsByTagName('li') == null){this.disabled = true;}
-    else {this.disabled = false}
-    const elementToSend = this.parentElement.getElementsByTagName('li');
-    document.getElementById('list2').insertBefore(elementToSend[elementToSend.length-1], newButtonForList2);
-})
-newButtonForList2.addEventListener('click', function(){
-    if(this.parentElement.getElementsByTagName('li') == null){this.disabled = true;}
-    else {this.disabled = false}
-    const elementToSend = this.parentElement.getElementsByTagName('li');
-    document.getElementById('list1').insertBefore(elementToSend[elementToSend.length-1], newButtonForList1);
-})
+var tab = ["XD", "Tak", "To", "Moja", "Praca"];
+f(tab);
 
-// //Zadanie 8
+//Zadanie 8
 
-var newForm1 = document.createElement('form');
-bodyDocument.insertBefore(newForm1, jsScript);
-
-var newInputElement = document.createElement('input');
-newInputElement.type = "text"; newInputElement.id = "element"; newInputElement.name = "element";
-newForm1.appendChild(newInputElement);
-
-var newInputText = document.createElement('input');
-newInputText.type = "text"; newInputText.id = "text"; newInputText.name = "text";
-newForm1.appendChild(newInputText);
-
-var newInputTextColor = document.createElement('input');
-newInputTextColor.type = "color"; newInputTextColor.id = "color"; newInputTextColor.name = "color";
-newForm1.appendChild(newInputTextColor);
-
-var newInputNumber = document.createElement('input');
-newInputNumber.type = "number"; newInputNumber.id = "number"; newInputNumber.name = "number";
-newForm1.appendChild(newInputNumber);
-
-var newInputButton = document.createElement('input');
-newInputButton.type = "button"; newInputButton.id = "button"; newInputButton.name = "button"; newInputButton.value = "Create";
-newForm1.appendChild(newInputButton);
-
-newInputButton.addEventListener('click', function(){
-    const type = document.getElementById('element').value;
-    const text = document.getElementById('text').value;
-    const color = document.getElementById('color').value;
-    const quantity = document.getElementById('number').value;
-
-    for(var i = 0; i<quantity; i++)
+function f(x,y)
+{
+  var tab = [];
+  for(var i=0; i<x.length; i++)
     {
-        let newElement = document.createElement(type);
-        newElement.innerText = text;
-        newElement.setAttribute('style', 'color:'+color);
-        newForm1.appendChild(newElement);
+      tab[i] = x[i] + y[i];
     }
-})
+  console.log(tab);
+}
+
+var tab1 = [1, 2, 3, 4, 5];
+var tab2 = [1, 2, 3, 4, 5];
+f(tab1,tab2);
 
 //Zadanie 9
 
-let tab = [];
-var newForm2 = document.createElement('form');
-bodyDocument.insertBefore(newForm2, jsScript);
-newForm2.id = "XD";
-
-var newInputFName = document.createElement('input');
-newInputFName.type = "text"; newInputFName.id = "fName"; newInputFName.name = "fName"; newInputFName.className = "toGet";
-var newLabelFName = document.createElement('label');
-newLabelFName.for = "fName"; newLabelFName.innerText = "Imie"; newLabelFName.className = "toGet";
-tab[0] = newInputFName;
-tab[1] = newLabelFName;
-
-var newInputLName = document.createElement('input');
-newInputLName.type = "text"; newInputLName.id = "lName"; newInputLName.name = "lName"; newInputLName.className = "toGet";
-var newLabelLName = document.createElement('label');
-newLabelFName.for = "lName"; newLabelLName.innerText = "Nazwisko"; newLabelLName.className = "toGet";
-tab[2] = newInputLName;
-tab[3] = newLabelLName;
-
-var newInputAge = document.createElement('input');
-newInputAge.type = "number"; newInputAge.id = "age"; newInputAge.name = "age"; newInputAge.min = 0; newInputAge.className = "toGet";
-var newLabelAge = document.createElement('label');
-newLabelAge.for = "age"; newLabelAge.innerText = "Wiek"; newLabelAge.className = "toGet";
-tab[4] = newInputAge;
-tab[5] = newLabelAge;
-
-var newInputNumChild = document.createElement('input');
-newInputNumChild.type = "number"; newInputNumChild.id = "numChild"; newInputNumChild.name = "numChild"; newInputNumChild.min = 0; newInputNumChild.className = "toGet";
-var newLabelNumChild = document.createElement('label');
-newLabelNumChild.for = "numChild"; newLabelNumChild.innerText = "Ilość dzieci"; newLabelNumChild.className = "toGet";
-tab[6] = newInputNumChild;
-tab[7] = newLabelNumChild;
-
-for(var i = 0; i<tab.length; i+=2)
+function f(x,y)
 {
-    var newBr = document.createElement('br');
-    newForm2.appendChild(tab[i]);
-    newForm2.appendChild(tab[i+1]);
-    newForm2.appendChild(newBr);
-}
-
-var newForm2ButtonMore = document.createElement('input');
-newForm2ButtonMore.type = "button"; newForm2ButtonMore.value = "Więcej"; newForm2ButtonMore.id = "more"; newForm2ButtonMore.name = "more";
-newForm2.appendChild(newForm2ButtonMore);
-
-var newForm2ButoonCreate = document.createElement('input');
-newForm2ButoonCreate.type = "button"; newForm2ButoonCreate.value = "Utwórz"; newForm2ButoonCreate.id = "create"; newForm2ButoonCreate.name = "create";
-newForm2.appendChild(newForm2ButoonCreate);
-
-var x = 0;
-var createInputLabel = function(){
-    for(var i = 0; i<=1; i++)
+  var index = x.indexOf(y);
+  if(index >=0)
     {
-        var newInput = document.createElement("input");
-        newInput.type = "text"; newInput.id = "input"+x; newInput.name = "input"+x; newInput.className = "toGet"
-        newForm2.insertBefore(newInput, newForm2ButtonMore);
-        x++
+      x.splice(index, 1);
     }
-    var newBr = document.createElement('br');
-    newForm2.insertBefore(newBr, newForm2ButtonMore);
-}
-newForm2ButtonMore.addEventListener('click', createInputLabel);
-
-var deleteRow = function(){
-    rowToDelete = this.parentElement;
-    this.parentElement.parentElement.removeChild(rowToDelete);
+  var newTab = x;
+  console.log(newTab);
 }
 
-var newStyle = document.createElement('style');
-newStyle.innerHTML = 'td { border: 1px solid black; }';
-bodyDocument.insertBefore(newStyle, document.getElementById('root'));
-
-var createTable = function(){
-    var tabElements = newForm2.getElementsByClassName('toGet');
-    let newTab = document.createElement('tab');
-    for(var i = 0; i<tabElements.length;)
-    {
-        let newTr = document.createElement('tr');
-        for(var j = 0; j<=1; j++)
-        {
-            let newTd = document.createElement('td')
-            if(i == 1 || i == 3 || i ==5 || i ==7){newTd.innerText = tabElements[i].innerText;}
-            else {newTd.innerText = tabElements[i].value;}
-            checkStrings(newTd);
-            newTr.appendChild(newTd);
-            i++;
-        }
-        var newButtonDelete = document.createElement('input');
-        newButtonDelete.type = 'button'; newButtonDelete.value = "Usuń"; newButtonDelete.id = 'delete'; newButtonDelete.name = 'delete';
-        newButtonDelete.addEventListener('click', deleteRow);
-        newTr.appendChild(newButtonDelete);
-        newTab.appendChild(newTr);
-    }
-    bodyDocument.insertBefore(newTab, jsScript);
-}
-
-newForm2ButoonCreate.addEventListener('click', createTable);
+var tab = [2, 1, 3, 7];
+f(tab, tab[2])
 
 //Zadanie 10
 
-var checkStrings = function(string){
-    var char = string.innerText[0];
-    var restOfWord = string.innerText.slice(1);
-    string.innerText = char.toUpperCase() + restOfWord;
-}
-
-//Zadanie 11
-
-let checkForNumb = function(string){
-    var sum = 0;
-    var product = 1;
-    for(var i = 0; i<string.length; i++)
+function f(x)
+{
+  for(var i = 0; i<x.length; i++)
     {
-        if(parseInt(string[i])==string[i])
-        {
-            sum += parseInt(string[i]);
-            product *= string[i];
-        }
+      x[i] *= -1;
     }
-    console.log(sum);
-    for(var i = 0; i<product; i++)
-    {
-        newDivString = document.createElement('div');
-        newDivString.innerText = string;
-        bodyDocument.insertBefore(newDivString, jsScript);
-    }
+  console.log(x);
 }
 
-checkForNumb("21XD37");
-
-//Zadanie 12
-
-let setString = function(string){
-    document.getElementById('root').innerText = string;
-}
-
-setString("XD");
-
-var checkDiv = document.getElementById('root');
-checkDiv.method1 = function(){
-    regex = /Ala/gi;
-    if(regex.test(this.innerText)== true){
-        let newString = this.innerText.replace(regex, 'Ola');
-        this.innerText = newString;
-    }
-    else{
-        var newDivError = document.createElement('div');
-        newDivError.innerText = "Słowo Ala nie występuje w tekście.";
-        this.appendChild(newDivError);
-    }
-}
-
-checkDiv.method1();
-
-//Zadanie 13
-
-var firstFunction = function(string){
-    var firstResult = [];
-    for(var i = 0; i < tabString.length; i++){
-        var sum = 0;
-        for(var j = 0; tabString[i].length; j++){
-            if(parseInt(string[i][j])==string[i][j]) sum++;
-        }
-        firstResult += sum;
-    }
-    console.log(firstResult);
-}
-
-const tabString = ["Mar4eT6", "123", "Ala"]
-
-firstFunction(tabString);
-
-//           _
-//       .__(.)< *kwa*Ten kod nie nadaje się
-//        \___)   do dializy nerek*kwa*
-// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+var tab = [1, 2, -3, 4, -5];
+f(tab);
